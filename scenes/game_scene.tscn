@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://dbie46enaq5x1"]
+[gd_scene load_steps=6 format=3 uid="uid://dbie46enaq5x1"]
+
+[ext_resource type="PackedScene" uid="uid://c7e6xahfd8y4u" path="res://assets/prefabs/screen.tscn" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://assets/models/office/Office_Grime.glb" id="2_onqr8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ycayy"]
+sky_material = SubResource("ProceduralSkyMaterial_onqr8")
+
+[sub_resource type="Environment" id="Environment_bw6k5"]
+background_energy_multiplier = 0.2
+sky = SubResource("Sky_ycayy")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="GameScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bw6k5")
+
+[node name="Screen" parent="." instance=ExtResource("1_w5aja")]
+transform = Transform3D(0.509, 0, 0, 0, 0.509, 0, 0, 0, 0.509, 1.9481525, 0.3379401, 3.878285)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 1.941, 0.981, 6.766)
+fov = 32.6
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.3852137, 0.42549992, -0.8188774, 6.1221996e-08, 0.88735706, 0.4610829, 0.9228276, 0.1776154, -0.34182212, 0.046987027, 0.35034984, 4.764259)
+spot_angle = 79.56
+
+[node name="Office_Grime" parent="." instance=ExtResource("2_onqr8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.99999994, 0, -1, -4.3711385e-08, 0, 2.858, 0)
+light_color = Color(1, 1, 0.90588236, 1)
+light_energy = 0.8
+spot_range = 15.0
+spot_angle = 79.56
