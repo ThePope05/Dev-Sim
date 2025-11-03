@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbie46enaq5x1"]
+[gd_scene load_steps=7 format=3 uid="uid://dbie46enaq5x1"]
 
-[ext_resource type="PackedScene" uid="uid://c7e6xahfd8y4u" path="res://assets/prefabs/screen.tscn" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://71u0albp57vj" path="res://assets/prefabs/element_screen.tscn" id="1_w5aja"]
 [ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://assets/models/office/Office_Grime.glb" id="2_onqr8"]
+[ext_resource type="PackedScene" uid="uid://1rudrrshmk2t" path="res://assets/prefabs/assignment_screen.tscn" id="3_ycayy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,11 +23,11 @@ glow_enabled = true
 environment = SubResource("Environment_bw6k5")
 
 [node name="Screen" parent="." instance=ExtResource("1_w5aja")]
-transform = Transform3D(0.509, 0, 0, 0, 0.509, 0, 0, 0, 0.509, 1.9481525, 0.3379401, 3.878285)
+transform = Transform3D(0.509, 0, 0, 0, 0.509, 0, 0, 0, 0.509, 1.9481525, 0.3379401, 3.9074416)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 1.941, 0.981, 6.766)
-fov = 32.6
+transform = Transform3D(0.98129267, -0.020124024, 0.19146731, 0, 0.99452186, 0.104528464, -0.19252196, -0.10257301, 0.97591704, 1.941, 0.676, 6.766)
+fov = 30.7
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.3852137, 0.42549992, -0.8188774, 6.1221996e-08, 0.88735706, 0.4610829, 0.9228276, 0.1776154, -0.34182212, 0.046987027, 0.35034984, 4.764259)
@@ -41,3 +42,6 @@ light_color = Color(1, 1, 0.90588236, 1)
 light_energy = 0.8
 spot_range = 15.0
 spot_angle = 79.56
+
+[node name="AssignmentScreen" parent="." instance=ExtResource("3_ycayy")]
+transform = Transform3D(0.723069, 0, 0.3423028, 0, 0.8, 0, -0.3423028, 0, 0.723069, 0.62330115, 0.33908647, 4.1850295)
