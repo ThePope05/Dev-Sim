@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5c23naevf05w"]
+
+[ext_resource type="Texture2D" uid="uid://c8i5h3yf1u12r" path="res://assets/images/elements/Table.png" id="1_7yuxh"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="2_joef1"]
+
+[node name="TableElement" type="TextureRect"]
+offset_left = 206.0
+offset_top = 69.0
+offset_right = 825.0
+offset_bottom = 294.0
+texture = ExtResource("1_7yuxh")
+expand_mode = 1
+script = ExtResource("2_joef1")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"

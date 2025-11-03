@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs727k1u0jg5n"]
+
+[ext_resource type="Texture2D" uid="uid://j3w64mwrffxh" path="res://assets/images/elements/CardSm.png" id="1_i17ym"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="2_ogds7"]
+
+[node name="SmallCardElement" type="TextureRect"]
+offset_left = 372.0
+offset_top = 409.0
+offset_right = 672.0
+offset_bottom = 634.0
+texture = ExtResource("1_i17ym")
+expand_mode = 1
+script = ExtResource("2_ogds7")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"

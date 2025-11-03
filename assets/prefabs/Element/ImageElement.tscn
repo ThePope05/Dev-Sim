@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://comed4ljqa51i"]
+
+[ext_resource type="Texture2D" uid="uid://cg2jhx0wttefh" path="res://assets/images/elements/Image.png" id="1_atffv"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="2_3baxt"]
+
+[node name="ImageElement" type="TextureRect"]
+offset_left = 641.0
+offset_top = 137.0
+offset_right = 1216.0
+offset_bottom = 469.0
+texture = ExtResource("1_atffv")
+expand_mode = 1
+script = ExtResource("2_3baxt")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
