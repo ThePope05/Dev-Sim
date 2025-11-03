@@ -23,7 +23,7 @@ size = Vector2(2.667, 1.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_my36f"]
 size = Vector3(2.6669922, 1.4938965, 0.02)
 
-[node name="Screen" type="StaticBody3D"]
+[node name="ElementScreen" type="StaticBody3D"]
 script = ExtResource("1_u5qh2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

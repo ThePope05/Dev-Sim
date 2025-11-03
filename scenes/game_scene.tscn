@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dbie46enaq5x1"]
 
-[ext_resource type="PackedScene" uid="uid://c7e6xahfd8y4u" path="res://assets/prefabs/screen.tscn" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://c7e6xahfd8y4u" path="res://assets/prefabs/element_screen.tscn" id="1_w5aja"]
 [ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://assets/models/office/Office_Grime.glb" id="2_onqr8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
