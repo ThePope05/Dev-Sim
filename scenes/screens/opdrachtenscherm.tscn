@@ -1,0 +1,282 @@
+[gd_scene load_steps=21 format=3 uid="uid://km0rwrxoaw82"]
+
+[ext_resource type="FontFile" uid="uid://c1q2nf2i522ar" path="res://assets/fonts/abduction2002.ttf" id="1_42dh3"]
+[ext_resource type="Script" uid="uid://bejwadrnohchw" path="res://assets/scripts/h_box_container.gd" id="2_7id7d"]
+[ext_resource type="ButtonGroup" uid="uid://cid8fprtsmei2" path="res://assets/images/Screenshots/personen_buttons.tres" id="3_7id7d"]
+
+[sub_resource type="Theme" id="Theme_wcyxe"]
+default_font = ExtResource("1_42dh3")
+default_font_size = 22
+Button/colors/font_color = Color(0, 1, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42dh3"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_t35ln"]
+color = Color(0, 1, 0.5019608, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hvar"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 1, 0.5019608, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7id7d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0, 1, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enok4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rofmw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_x2qin"]
+color = Color(0, 1, 0.5019608, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltvew"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ngjy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfk3p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnbgx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kd5hr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0yo42"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faty5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5hvar"]
+color = Color(0, 1, 0.5019608, 1)
+thickness = 2
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2qin"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 1, 0.5019608, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="Opdrachtenscherm" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wcyxe")
+theme_override_styles/panel = SubResource("StyleBoxFlat_42dh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.5019608, 1)
+theme_override_font_sizes/font_size = 34
+text = "Grimcode interfaces"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_t35ln")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+script = ExtResource("2_7id7d")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5hvar")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Vermeer" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 1, 0.5019608, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7id7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_enok4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rofmw")
+toggle_mode = true
+button_group = ExtResource("3_7id7d")
+text = "J. Vermeer
+Portfolio Page"
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_x2qin")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Vries" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7id7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ltvew")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ngjy")
+toggle_mode = true
+button_group = ExtResource("3_7id7d")
+text = "L. de Vries
+product page"
+alignment = 0
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_x2qin")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Koster" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7id7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tfk3p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hnbgx")
+toggle_mode = true
+button_group = ExtResource("3_7id7d")
+text = "M. Koster
+Landing page"
+alignment = 0
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_x2qin")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Bakker" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kd5hr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0yo42")
+theme_override_styles/hover = SubResource("StyleBoxFlat_faty5")
+toggle_mode = true
+button_group = ExtResource("3_7id7d")
+text = "T. bakker
+welcome page"
+alignment = 0
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_5hvar")
+
+[node name="Opdracht" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="titel_opdracht" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.5019608, 1)
+theme_override_font_sizes/font_size = 30
+text = "opdrachtnaam"
+horizontal_alignment = 1
+
+[node name="design" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht"]
+custom_minimum_size = Vector2(0, 280)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="plaatje" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/design"]
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Uitleg" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 1, 0.5019608, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "uitleg tekst uitleg tekst uitleg tekst uitleg tekst uitleg tekst uitleg tekst uitleg tekst uitleg tekst "
+fit_content = true
+
+[node name="Start_button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2qin")
+text = "start opdracht"
+
+[node name="PreviewPopup" type="PopupPanel" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht"]
+oversampling_override = 1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/PreviewPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/PreviewPopup/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/PreviewPopup/MarginContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 5
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Vermeer" to="MarginContainer/VBoxContainer/HBoxContainer" method="_on_vermeer_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Vermeer" to="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/titel_opdracht" method="set_text" binds= ["profile page"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/Vries" to="MarginContainer/VBoxContainer/HBoxContainer" method="_on_vries_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/Vries" to="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/titel_opdracht" method="set_text" binds= ["product page"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer3/Koster" to="MarginContainer/VBoxContainer/HBoxContainer" method="_on_koster_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer3/Koster" to="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/titel_opdracht" method="set_text" binds= ["landing page"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer4/Bakker" to="MarginContainer/VBoxContainer/HBoxContainer" method="_on_bakker_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer4/Bakker" to="MarginContainer/VBoxContainer/HBoxContainer/Opdracht/titel_opdracht" method="set_text" binds= ["welcome page"]]
