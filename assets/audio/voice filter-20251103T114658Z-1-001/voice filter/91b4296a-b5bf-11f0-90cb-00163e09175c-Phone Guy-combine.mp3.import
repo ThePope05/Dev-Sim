@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwiekv6hyauvr"
+path="res://.godot/imported/91b4296a-b5bf-11f0-90cb-00163e09175c-Phone Guy-combine.mp3-20a0b2dfddf6ccf31e7badc0636a4182.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice filter-20251103T114658Z-1-001/voice filter/91b4296a-b5bf-11f0-90cb-00163e09175c-Phone Guy-combine.mp3"
+dest_files=["res://.godot/imported/91b4296a-b5bf-11f0-90cb-00163e09175c-Phone Guy-combine.mp3-20a0b2dfddf6ccf31e7badc0636a4182.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
