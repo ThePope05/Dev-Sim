@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbie46enaq5x1"]
+[gd_scene load_steps=9 format=3 uid="uid://dbie46enaq5x1"]
 
 [ext_resource type="PackedScene" uid="uid://71u0albp57vj" path="res://assets/prefabs/element_screen.tscn" id="1_w5aja"]
+[ext_resource type="Script" uid="uid://dgdl7tuewyh7j" path="res://assets/scripts/customNodes/MoveableCamera.gd" id="2_bw6k5"]
 [ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://assets/models/office/Office_Grime.glb" id="2_onqr8"]
 [ext_resource type="PackedScene" uid="uid://1rudrrshmk2t" path="res://assets/prefabs/assignment_screen.tscn" id="3_ycayy"]
+[ext_resource type="PackedScene" uid="uid://lx6oviu0t0a0" path="res://assets/prefabs/code_screen.tscn" id="5_y3j0m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,10 +27,6 @@ environment = SubResource("Environment_bw6k5")
 [node name="Screen" parent="." instance=ExtResource("1_w5aja")]
 transform = Transform3D(0.509, 0, 0, 0, 0.509, 0, 0, 0, 0.509, 1.9481525, 0.3379401, 3.9074416)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.98129267, -0.020124024, 0.19146731, 0, 0.99452186, 0.104528464, -0.19252196, -0.10257301, 0.97591704, 1.941, 0.676, 6.766)
-fov = 30.7
-
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.3852137, 0.42549992, -0.8188774, 6.1221996e-08, 0.88735706, 0.4610829, 0.9228276, 0.1776154, -0.34182212, 0.046987027, 0.35034984, 4.764259)
 light_color = Color(0.9154465, 0.9427373, 0.70180243, 1)
@@ -46,3 +44,16 @@ spot_angle = 79.56
 
 [node name="AssignmentScreen" parent="." instance=ExtResource("3_ycayy")]
 transform = Transform3D(0.723069, 0, 0.3423028, 0, 0.8, 0, -0.3423028, 0, 0.723069, 0.62330115, 0.33908647, 4.1850295)
+
+[node name="MoveableCamera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.99337274, -0.013011254, 0.11419832, 0, 0.9935719, 0.11320321, -0.11493715, -0.112452984, 0.98698723, 1.941, 0.676, 6.766)
+fov = 28.0
+script = ExtResource("2_bw6k5")
+mouse_influence = 1.0
+min_rotation_limit = Vector3(-5, -5, 0)
+max_rotation_limit = Vector3(5, 15, 0)
+reset_on_idle = false
+metadata/_custom_type_script = "uid://dgdl7tuewyh7j"
+
+[node name="CodeScreen" parent="." instance=ExtResource("5_y3j0m")]
+transform = Transform3D(0.55601454, 0, -0.2118322, 0, 0.595, 0, 0.2118322, 0, 0.55601454, 3.2887588, 0.71747553, 4.120988)
