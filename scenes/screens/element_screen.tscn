@@ -1,15 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://t7u7c5n0hjla"]
+[gd_scene load_steps=4 format=3 uid="uid://t7u7c5n0hjla"]
 
-[ext_resource type="Texture2D" uid="uid://j3w64mwrffxh" path="res://assets/images/elements/CardSm.png" id="1_0rs04"]
 [ext_resource type="Script" uid="uid://bf3d6c18kjqp1" path="res://assets/scripts/screen_element_controller.gd" id="1_jgy3b"]
-[ext_resource type="Texture2D" uid="uid://cg2jhx0wttefh" path="res://assets/images/elements/Image.png" id="3_ym1jx"]
-[ext_resource type="PackedScene" uid="uid://comed4ljqa51i" path="res://assets/prefabs/Element/ImageElement.tscn" id="4_f57hu"]
-[ext_resource type="Script" uid="uid://bdnglcfv3kbko" path="res://assets/scripts/customNodes/ClickableTextureRect.gd" id="5_fwgoi"]
-[ext_resource type="PackedScene" uid="uid://bs727k1u0jg5n" path="res://assets/prefabs/Element/SmallCardElement.tscn" id="6_f57hu"]
-[ext_resource type="Texture2D" uid="uid://belwplpxvtab7" path="res://assets/images/elements/CardLg.png" id="7_aiw4s"]
+[ext_resource type="PackedScene" uid="uid://comed4ljqa51i" path="res://assets/prefabs/Element/ImageElement.tscn" id="3_ym1jx"]
 [ext_resource type="PackedScene" uid="uid://i8gyo2qpx4f5" path="res://assets/prefabs/Element/CardElement.tscn" id="8_2gpck"]
-[ext_resource type="Texture2D" uid="uid://c8i5h3yf1u12r" path="res://assets/images/elements/Table.png" id="9_rawol"]
-[ext_resource type="PackedScene" uid="uid://c5c23naevf05w" path="res://assets/prefabs/Element/TableElement.tscn" id="10_domcc"]
 
 [node name="ElementScreen" type="Panel"]
 anchors_preset = 15
@@ -21,21 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jgy3b")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-split_offset = 1600
-dragging_enabled = false
-dragger_visibility = 2
-
-[node name="ElementPanel" type="Panel" parent="HSplitContainer"]
-layout_mode = 2
-
-[node name="Background" type="ColorRect" parent="HSplitContainer/ElementPanel"]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,64 +22,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ElementPickerPanel" type="Panel" parent="HSplitContainer"]
-layout_mode = 2
+[node name="CardElement" parent="Background" instance=ExtResource("8_2gpck")]
+layout_mode = 0
 
-[node name="GridContainer" type="ScrollContainer" parent="HSplitContainer/ElementPickerPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/ElementPickerPanel/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/ElementPickerPanel/GridContainer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect3" type="TextureRect" parent="HSplitContainer/ElementPickerPanel/GridContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("ElementScreen")]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("3_ym1jx")
-expand_mode = 5
-script = ExtResource("5_fwgoi")
-ElementScreen = NodePath("../../../../../ElementPanel/Background")
-Element = ExtResource("4_f57hu")
-metadata/_custom_type_script = "uid://bdnglcfv3kbko"
-
-[node name="TextureRect4" type="TextureRect" parent="HSplitContainer/ElementPickerPanel/GridContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("ElementScreen")]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("1_0rs04")
-expand_mode = 5
-script = ExtResource("5_fwgoi")
-ElementScreen = NodePath("../../../../../ElementPanel/Background")
-Element = ExtResource("6_f57hu")
-metadata/_custom_type_script = "uid://bdnglcfv3kbko"
-
-[node name="TextureRect5" type="TextureRect" parent="HSplitContainer/ElementPickerPanel/GridContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("ElementScreen")]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("7_aiw4s")
-expand_mode = 5
-script = ExtResource("5_fwgoi")
-ElementScreen = NodePath("../../../../../ElementPanel/Background")
-Element = ExtResource("8_2gpck")
-metadata/_custom_type_script = "uid://bdnglcfv3kbko"
-
-[node name="TextureRect6" type="TextureRect" parent="HSplitContainer/ElementPickerPanel/GridContainer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("ElementScreen")]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("9_rawol")
-expand_mode = 5
-script = ExtResource("5_fwgoi")
-ElementScreen = NodePath("../../../../../ElementPanel/Background")
-Element = ExtResource("10_domcc")
-metadata/_custom_type_script = "uid://bdnglcfv3kbko"
+[node name="ImageElement" parent="Background" instance=ExtResource("3_ym1jx")]
+layout_mode = 0

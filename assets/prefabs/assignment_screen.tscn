@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7e6xahfd8y4u"]
+[gd_scene load_steps=8 format=3 uid="uid://1rudrrshmk2t"]
 
-[ext_resource type="PackedScene" uid="uid://t7u7c5n0hjla" path="res://scenes/screens/element_screen.tscn" id="1_my36f"]
-[ext_resource type="Script" uid="uid://0akmmgmqmd4l" path="res://assets/scripts/screen_input_controller.gd" id="1_u5qh2"]
+[ext_resource type="Script" uid="uid://0akmmgmqmd4l" path="res://assets/scripts/screen_input_controller.gd" id="1_1qrra"]
+[ext_resource type="PackedScene" path="res://scenes/screens/opdrachtenscherm.tscn" id="2_1qrra"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_i3u6p"]
 viewport_path = NodePath("SubViewport")
@@ -18,13 +18,13 @@ emission_texture = SubResource("ViewportTexture_u5qh2")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dalrj"]
 material = SubResource("StandardMaterial3D_7uivf")
-size = Vector2(2.667, 1.5)
+size = Vector2(1.15, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_my36f"]
-size = Vector3(2.6669922, 1.4938965, 0.02)
+size = Vector3(1.15, 1, 0.02)
 
-[node name="Screen" type="StaticBody3D"]
-script = ExtResource("1_u5qh2")
+[node name="AssignmentScreen" type="StaticBody3D"]
+script = ExtResource("1_1qrra")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
@@ -35,9 +35,7 @@ shape = SubResource("BoxShape3D_my36f")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 disable_3d = true
-size = Vector2i(1920, 1080)
+size = Vector2i(1080, 960)
 render_target_update_mode = 4
 
-[node name="ElementScreen" parent="SubViewport" instance=ExtResource("1_my36f")]
-offset_right = 0.0
-offset_bottom = 0.0
+[node name="Opdrachtenscherm" parent="SubViewport" instance=ExtResource("2_1qrra")]
