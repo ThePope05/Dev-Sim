@@ -31,6 +31,7 @@ fov = 30.7
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-0.3852137, 0.42549992, -0.8188774, 6.1221996e-08, 0.88735706, 0.4610829, 0.9228276, 0.1776154, -0.34182212, 0.046987027, 0.35034984, 4.764259)
+light_color = Color(0.9154465, 0.9427373, 0.70180243, 1)
 spot_angle = 79.56
 
 [node name="Office_Grime" parent="." instance=ExtResource("2_onqr8")]
@@ -38,7 +39,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.99999994, 0, -1, -4.3711385e-08, 0, 2.858, 0)
-light_color = Color(1, 1, 0.90588236, 1)
+light_color = Color(0.999999, 0.9977427, 0.8040513, 1)
 light_energy = 0.8
 spot_range = 15.0
 spot_angle = 79.56
