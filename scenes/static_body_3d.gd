@@ -1,4 +1,5 @@
 extends StaticBody3D
+<<<<<<< Updated upstream
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	input_event.connect(_on_input_event);
@@ -8,3 +9,5 @@ func _on_input_event(camera : Node, event : InputEvent, event_position : Vector3
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Something with this collision")
 		
+=======
+>>>>>>> Stashed changes

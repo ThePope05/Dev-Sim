@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctsaib8buo2q7"
+path="res://.godot/imported/intro.wav-a68ee210d3f511cbf4c9d2d43532070a.sample"
+
+[deps]
+
+source_file="res://assets/audio/voice filter-20251103T114658Z-1-001/voice filter/intro.wav"
+dest_files=["res://.godot/imported/intro.wav-a68ee210d3f511cbf4c9d2d43532070a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
