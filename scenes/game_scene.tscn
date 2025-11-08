@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbie46enaq5x1"]
+[gd_scene load_steps=10 format=3 uid="uid://dbie46enaq5x1"]
 
 [ext_resource type="PackedScene" uid="uid://71u0albp57vj" path="res://assets/prefabs/element_screen.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://dgdl7tuewyh7j" path="res://assets/scripts/customNodes/MoveableCamera.gd" id="2_bw6k5"]
-[ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://assets/models/office/Office_Grime.glb" id="2_onqr8"]
+[ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://office/Office_Grime.glb" id="2_onqr8"]
 [ext_resource type="PackedScene" uid="uid://1rudrrshmk2t" path="res://assets/prefabs/assignment_screen.tscn" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://lx6oviu0t0a0" path="res://assets/prefabs/code_screen.tscn" id="5_y3j0m"]
+[ext_resource type="PackedScene" uid="uid://dsb85gcg31qfu" path="res://scenes/healthbar.tscn" id="6_rurhu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -57,3 +58,10 @@ metadata/_custom_type_script = "uid://dgdl7tuewyh7j"
 
 [node name="CodeScreen" parent="." instance=ExtResource("5_y3j0m")]
 transform = Transform3D(0.55601454, 0, -0.2118322, 0, 0.595, 0, 0.2118322, 0, 0.55601454, 3.2887588, 0.71747553, 4.120988)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Healthbar" parent="UI" instance=ExtResource("6_rurhu")]
+
+[connection signal="start_shaking" from="UI/Healthbar" to="MoveableCamera3D" method="_on_healthbar_start_shaking"]
+[connection signal="stop_shaking" from="UI/Healthbar" to="MoveableCamera3D" method="_on_healthbar_stop_shaking"]
