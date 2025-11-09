@@ -2,7 +2,7 @@ extends Camera3D
 class_name MoveableCamera3D
 
 var is_shaking = false
-var shake_amount = 0.02
+var shake_amount = 0.005
 var original_position: Vector3
 @export var mouse_influence: float = 0.5
 @export var rotation_speed: float = 5.0
