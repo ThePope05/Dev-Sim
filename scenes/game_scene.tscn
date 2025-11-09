@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbie46enaq5x1"]
+[gd_scene load_steps=16 format=3 uid="uid://dbie46enaq5x1"]
 
 [ext_resource type="PackedScene" uid="uid://71u0albp57vj" path="res://assets/prefabs/element_screen.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://dgdl7tuewyh7j" path="res://assets/scripts/customNodes/MoveableCamera.gd" id="2_bw6k5"]
-[ext_resource type="PackedScene" uid="uid://dj3hnqte2wkvm" path="res://office/Office_Grime.glb" id="2_onqr8"]
+[ext_resource type="PackedScene" path="res://.godot/imported/Office_Grime.glb-f5658ed9b948ed4bfe3f2bfb15c3b480.scn" id="2_onqr8"]
 [ext_resource type="PackedScene" uid="uid://1rudrrshmk2t" path="res://assets/prefabs/assignment_screen.tscn" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://lx6oviu0t0a0" path="res://assets/prefabs/code_screen.tscn" id="5_y3j0m"]
 [ext_resource type="PackedScene" uid="uid://dsb85gcg31qfu" path="res://scenes/healthbar.tscn" id="6_rurhu"]
+[ext_resource type="Script" uid="uid://dx4x5ibtk4g73" path="res://assets/scripts/back_to_desk_button.gd" id="7_b5spy"]
+[ext_resource type="Script" uid="uid://xi8hgbmr8owk" path="res://assets/scripts/coffee_mug.gd" id="7_kk2rg"]
+[ext_resource type="Script" uid="uid://c0yg2y6xsjd5e" path="res://assets/scripts/coffee_machine.gd" id="9_utbpp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_onqr8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -19,6 +22,16 @@ background_energy_multiplier = 0.2
 sky = SubResource("Sky_ycayy")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rurhu"]
+height = 0.2551117
+radius = 0.14111328
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rurhu"]
+albedo_color = Color(0.31608334, 0.18532053, 0.029326692, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rurhu"]
+size = Vector3(1.2487183, 1.4892044, 1.8572693)
 
 [node name="GameScene" type="Node3D"]
 
@@ -34,7 +47,7 @@ light_color = Color(0.9154465, 0.9427373, 0.70180243, 1)
 spot_angle = 79.56
 
 [node name="Office_Grime" parent="." instance=ExtResource("2_onqr8")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.673004e-05, -0.018476248, -0.0004339218)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.99999994, 0, -1, -4.3711385e-08, 0, 2.858, 0)
@@ -63,5 +76,55 @@ transform = Transform3D(0.55601454, 0, -0.2118322, 0, 0.595, 0, 0.2118322, 0, 0.
 
 [node name="Healthbar" parent="UI" instance=ExtResource("6_rurhu")]
 
+[node name="BackToDeskButton" type="Button" parent="UI"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -108.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "Back to Desk"
+script = ExtResource("7_b5spy")
+
+[node name="CoffeeMug" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74078834, -0.25975648, 4.822109)
+script = ExtResource("7_kk2rg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoffeeMug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.019310027, 0)
+shape = SubResource("CylinderShape3D_rurhu")
+
+[node name="InsideMug" type="CSGCylinder3D" parent="CoffeeMug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0115737915, 0)
+operation = 2
+use_collision = true
+radius = 0.1352539
+height = 0.26646423
+sides = 64
+material = SubResource("StandardMaterial3D_rurhu")
+
+[node name="Fluid" type="CSGCylinder3D" parent="CoffeeMug/InsideMug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003799796, 0.005637005, 0.0027632713)
+operation = 2
+use_collision = true
+radius = 0.12548828
+height = 0.26646233
+sides = 64
+material = SubResource("StandardMaterial3D_rurhu")
+
+[node name="CoffeeMachine" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5990076, -0.04819715, -5.0452585)
+script = ExtResource("9_utbpp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoffeeMachine"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2830453, 0.5261879, -0.38317442)
+shape = SubResource("BoxShape3D_rurhu")
+
+[node name="CoffeeMachineViewPosition" type="Marker3D" parent="."]
+transform = Transform3D(-0.0060911477, 0, -0.9999815, 0, 1, 0, 0.9999815, 0, -0.0060911477, 1.2620565, 0.498919, -5.2995553)
+
 [connection signal="start_shaking" from="UI/Healthbar" to="MoveableCamera3D" method="_on_healthbar_start_shaking"]
 [connection signal="stop_shaking" from="UI/Healthbar" to="MoveableCamera3D" method="_on_healthbar_stop_shaking"]
+[connection signal="input_event" from="CoffeeMug" to="CoffeeMug" method="_on_input_event"]
+[connection signal="input_event" from="CoffeeMachine" to="CoffeeMachine" method="_on_input_event"]
