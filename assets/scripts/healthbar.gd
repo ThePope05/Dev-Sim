@@ -8,12 +8,13 @@ signal stop_shaking
 var health = 100 : set = _set_health
 
 func _ready():
-	init_health(100)
+	init_health(89)
 
 func _set_health(new_health):
 	var prev_health = health
 	health = min(max_value, new_health)
 	value = health
+	print("Health set to: ", health, " | Bar value: ", value)
 	
 	if health <= 0:
 		queue_free()
