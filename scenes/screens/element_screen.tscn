@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://t7u7c5n0hjla"]
+[gd_scene load_steps=5 format=3 uid="uid://t7u7c5n0hjla"]
 
 [ext_resource type="Script" uid="uid://bf3d6c18kjqp1" path="res://assets/scripts/screen_element_controller.gd" id="1_jgy3b"]
+[ext_resource type="FontFile" uid="uid://c1q2nf2i522ar" path="res://assets/fonts/abduction2002.ttf" id="2_0rs04"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rs04"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 0.5019608, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_ym1jx"]
+font = ExtResource("2_0rs04")
+font_size = 80
+font_color = Color(0, 1, 0.5019608, 1)
 
 [node name="ElementScreen" type="Panel"]
 anchors_preset = 15
@@ -19,3 +37,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Wallpaper" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_top = 400
+theme_override_constants/margin_right = 256
+theme_override_constants/margin_bottom = 400
+
+[node name="PanelContainer" type="PanelContainer" parent="Background/Wallpaper"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0rs04")
+
+[node name="Title" type="Label" parent="Background/Wallpaper/PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.5019608, 1)
+theme_override_font_sizes/font_size = 34
+text = "Grimcode interfaces"
+label_settings = SubResource("LabelSettings_ym1jx")
+horizontal_alignment = 1
+vertical_alignment = 1
