@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://t7u7c5n0hjla"]
+[gd_scene load_steps=2 format=3 uid="uid://t7u7c5n0hjla"]
 
 [ext_resource type="Script" uid="uid://bf3d6c18kjqp1" path="res://assets/scripts/screen_element_controller.gd" id="1_jgy3b"]
-[ext_resource type="PackedScene" uid="uid://comed4ljqa51i" path="res://assets/prefabs/Element/ImageElement.tscn" id="3_ym1jx"]
-[ext_resource type="PackedScene" uid="uid://i8gyo2qpx4f5" path="res://assets/prefabs/Element/CardElement.tscn" id="8_2gpck"]
 
 [node name="ElementScreen" type="Panel"]
 anchors_preset = 15
@@ -21,9 +19,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="CardElement" parent="Background" instance=ExtResource("8_2gpck")]
-layout_mode = 0
-
-[node name="ImageElement" parent="Background" instance=ExtResource("3_ym1jx")]
-layout_mode = 0

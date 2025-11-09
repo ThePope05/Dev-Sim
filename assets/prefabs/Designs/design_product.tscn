@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmj852pe26c51"]
+
+[ext_resource type="Texture2D" uid="uid://blj5ifvhhag0i" path="res://assets/images/Designs/Product/Background_Product.png" id="1_0alsr"]
+[ext_resource type="Texture2D" uid="uid://c4lx7jpb5vbd8" path="res://assets/images/Designs/Product/Image_Product.png" id="2_5skk3"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="3_gmjfr"]
+[ext_resource type="Texture2D" uid="uid://bqmvoai4el7ic" path="res://assets/images/Designs/Product/Context_Product.png" id="4_vo71t"]
+[ext_resource type="Texture2D" uid="uid://crxof2iuxbgdc" path="res://assets/images/Designs/Product/Details_Product.png" id="5_ugj13"]
+[ext_resource type="Texture2D" uid="uid://du8eogwtr77ou" path="res://assets/images/Designs/Product/Button_Product.png" id="6_2xq11"]
+[ext_resource type="Texture2D" uid="uid://bhi16hqqulp81" path="res://assets/images/Designs/Product/Title_Product.png" id="7_c6vp7"]
+
+[node name="DesignProduct" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_0alsr")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ImageProduct" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 169.0
+offset_right = 480.0
+offset_bottom = 486.0
+texture = ExtResource("2_5skk3")
+stretch_mode = 2
+script = ExtResource("3_gmjfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ContextProduct" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1010.0
+offset_top = 228.0
+offset_right = 1565.0
+offset_bottom = 479.0
+texture = ExtResource("4_vo71t")
+stretch_mode = 2
+script = ExtResource("3_gmjfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="DetailsProduct" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 671.0
+offset_right = 1232.0
+offset_bottom = 727.0
+texture = ExtResource("5_ugj13")
+stretch_mode = 2
+script = ExtResource("3_gmjfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ButtonProduct" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1393.0
+offset_top = 568.0
+offset_right = 1651.0
+offset_bottom = 655.0
+texture = ExtResource("6_2xq11")
+stretch_mode = 2
+script = ExtResource("3_gmjfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="TitleProduct" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1250.0
+offset_top = 933.0
+offset_right = 1667.0
+offset_bottom = 994.0
+texture = ExtResource("7_c6vp7")
+stretch_mode = 2
+script = ExtResource("3_gmjfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
