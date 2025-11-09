@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://x3wjos6eejj8"]
+
+[ext_resource type="Texture2D" uid="uid://cn8bmqv6b4hna" path="res://assets/images/Designs/Portfolio/Background_Portfolio.png" id="1_a0drf"]
+[ext_resource type="Texture2D" uid="uid://bgmqbgjlrc2yy" path="res://assets/images/Designs/Portfolio/Projects_Portfolio.png" id="2_66eod"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="3_wiieq"]
+[ext_resource type="Texture2D" uid="uid://bnghneg7ms76a" path="res://assets/images/Designs/Portfolio/Contact_Portfolio.png" id="4_nsb5q"]
+[ext_resource type="Texture2D" uid="uid://dv0ki70fnc33d" path="res://assets/images/Designs/Portfolio/Title_Portfolio.png" id="5_x66xt"]
+[ext_resource type="Texture2D" uid="uid://cyd2t1ewbefn7" path="res://assets/images/Designs/Portfolio/Text_Portfolio.png" id="6_xvu7o"]
+[ext_resource type="Texture2D" uid="uid://y0jeipu43x1b" path="res://assets/images/Designs/Portfolio/Pfp_Portfolio.png" id="7_qxt2y"]
+
+[node name="DesignPortfolio" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_a0drf")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ProjectsButton" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 1382.0
+offset_top = 868.0
+offset_right = 1736.0
+offset_bottom = 956.0
+texture = ExtResource("2_66eod")
+stretch_mode = 2
+script = ExtResource("3_wiieq")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ContactButton" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 700.0
+offset_right = 571.0
+offset_bottom = 788.0
+texture = ExtResource("4_nsb5q")
+stretch_mode = 2
+script = ExtResource("3_wiieq")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="PortfolioTitle" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 285.0
+offset_right = 1282.0
+offset_bottom = 348.0
+texture = ExtResource("5_x66xt")
+stretch_mode = 2
+script = ExtResource("3_wiieq")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="PortfolioContext" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 736.0
+offset_right = 1319.0
+offset_bottom = 987.0
+texture = ExtResource("6_xvu7o")
+stretch_mode = 2
+script = ExtResource("3_wiieq")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="PortfolioProfileImg" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 293.0
+offset_right = 455.0
+offset_bottom = 645.0
+texture = ExtResource("7_qxt2y")
+stretch_mode = 2
+script = ExtResource("3_wiieq")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"

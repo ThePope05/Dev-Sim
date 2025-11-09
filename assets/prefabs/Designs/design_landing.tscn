@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqot7b1hbnaqx"]
+
+[ext_resource type="Texture2D" uid="uid://byboingntbnr7" path="res://assets/images/Designs/Landing/Background_Landing.png" id="1_k2xlb"]
+[ext_resource type="Texture2D" uid="uid://bpht4kwkuwc1e" path="res://assets/images/Designs/Landing/Image_Landing.png" id="2_jqhym"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="3_utcfr"]
+[ext_resource type="Texture2D" uid="uid://se17pkogfvw" path="res://assets/images/Designs/Landing/Title_Landing.png" id="4_8r3xy"]
+[ext_resource type="Texture2D" uid="uid://sfpdvtwvfewt" path="res://assets/images/Designs/Landing/Card_Landing.png" id="5_m7phk"]
+[ext_resource type="Texture2D" uid="uid://b7gy08hv7xwiu" path="res://assets/images/Designs/Landing/Button1_Landing.png" id="6_7doyj"]
+[ext_resource type="Texture2D" uid="uid://dlnp3iie2w3k4" path="res://assets/images/Designs/Landing/Button2_Landing.png" id="7_oc333"]
+[ext_resource type="Texture2D" uid="uid://cg54v375orsee" path="res://assets/images/Designs/Landing/Button3_Landing.png" id="8_0l28q"]
+[ext_resource type="Texture2D" uid="uid://c1wmyc4dhqctf" path="res://assets/images/Designs/Landing/Button4_Landing.png" id="9_u2rxw"]
+
+[node name="DesignLanding" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_k2xlb")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ImageLanding" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 274.0
+offset_right = 821.0
+offset_bottom = 606.0
+texture = ExtResource("2_jqhym")
+stretch_mode = 3
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ContextLanding" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1201.0
+offset_top = 417.0
+offset_right = 1756.0
+offset_bottom = 674.0
+texture = ExtResource("4_8r3xy")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardLanding" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 785.0
+offset_right = 595.0
+offset_bottom = 945.0
+texture = ExtResource("5_m7phk")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardLanding2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1073.0
+offset_top = 776.0
+offset_right = 1297.0
+offset_bottom = 936.0
+texture = ExtResource("5_m7phk")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardLanding3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 736.0
+offset_right = 1174.0
+offset_bottom = 896.0
+texture = ExtResource("5_m7phk")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardLanding4" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 831.0
+offset_right = 869.0
+offset_bottom = 991.0
+texture = ExtResource("5_m7phk")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="Button1Landing" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 117.0
+offset_right = 330.0
+offset_bottom = 173.0
+texture = ExtResource("6_7doyj")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="Button2Landing" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 77.0
+offset_right = 1202.0
+offset_bottom = 133.0
+texture = ExtResource("7_oc333")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="Button3Landing" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1346.0
+offset_top = 171.0
+offset_right = 1457.0
+offset_bottom = 227.0
+texture = ExtResource("8_0l28q")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="Button4Landing" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1544.0
+offset_top = 173.5
+offset_right = 1738.0
+offset_bottom = 229.5
+texture = ExtResource("9_u2rxw")
+script = ExtResource("3_utcfr")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"

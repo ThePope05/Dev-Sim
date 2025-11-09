@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://7id23kh85vym"]
+
+[ext_resource type="Texture2D" uid="uid://5au56ycf0pde" path="res://assets/images/Designs/Welcome/Background_Welcome.png" id="1_1ybi6"]
+[ext_resource type="Texture2D" uid="uid://0bklksymghoy" path="res://assets/images/Designs/Welcome/Button_Welcome.png" id="2_37cem"]
+[ext_resource type="Script" uid="uid://cuuvfb4t8xhf8" path="res://assets/scripts/customNodes/DraggableTextureRect.gd" id="3_7s755"]
+[ext_resource type="Texture2D" uid="uid://cc08yaf7f8kot" path="res://assets/images/Designs/Welcome/Card_Welcome.png" id="4_wnr7r"]
+[ext_resource type="Texture2D" uid="uid://bdvpfae7ut40g" path="res://assets/images/Designs/Welcome/Title_Welcome.png" id="5_ct614"]
+[ext_resource type="Texture2D" uid="uid://db553rwgwhj7n" path="res://assets/images/Designs/Welcome/Table_Welcome.png" id="6_q557v"]
+
+[node name="DesignWelcome" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_1ybi6")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ButtonWelcome" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 146.0
+offset_right = 466.0
+offset_bottom = 288.0
+texture = ExtResource("2_37cem")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ButtonWelcome2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 320.0
+offset_right = 763.0
+offset_bottom = 462.0
+texture = ExtResource("2_37cem")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="ButtonWelcome3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 262.0
+offset_right = 549.0
+offset_bottom = 404.0
+texture = ExtResource("2_37cem")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardWelcome" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 111.0
+offset_right = 1114.0
+offset_bottom = 419.0
+texture = ExtResource("4_wnr7r")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardWelcome2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 393.0
+offset_right = 974.0
+offset_bottom = 701.0
+texture = ExtResource("4_wnr7r")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="CardWelcome3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1206.0
+offset_top = 433.0
+offset_right = 1476.0
+offset_bottom = 741.0
+texture = ExtResource("4_wnr7r")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="TitleWelcome" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1323.0
+offset_top = 100.0
+offset_right = 1783.0
+offset_bottom = 158.0
+texture = ExtResource("5_ct614")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"
+
+[node name="TableWelcome" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 668.0
+offset_right = 1203.0
+offset_bottom = 936.0
+texture = ExtResource("6_q557v")
+stretch_mode = 2
+script = ExtResource("3_7s755")
+metadata/_custom_type_script = "uid://cuuvfb4t8xhf8"

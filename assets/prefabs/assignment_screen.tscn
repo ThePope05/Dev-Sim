@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://1rudrrshmk2t"]
+[gd_scene load_steps=8 format=3 uid="uid://688iw58137g4"]
 
 [ext_resource type="Script" uid="uid://0akmmgmqmd4l" path="res://assets/scripts/screen_input_controller.gd" id="1_1qrra"]
-[ext_resource type="PackedScene" path="res://scenes/screens/opdrachtenscherm.tscn" id="2_1qrra"]
+[ext_resource type="PackedScene" uid="uid://km0rwrxoaw82" path="res://scenes/screens/opdrachtenscherm.tscn" id="2_1qrra"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_i3u6p"]
 viewport_path = NodePath("SubViewport")
@@ -18,10 +18,10 @@ emission_texture = SubResource("ViewportTexture_u5qh2")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dalrj"]
 material = SubResource("StandardMaterial3D_7uivf")
-size = Vector2(1.15, 1)
+size = Vector2(1.15, 0.955)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_my36f"]
-size = Vector3(1.15, 1, 0.02)
+size = Vector3(1.15, 0.955, 0.02)
 
 [node name="AssignmentScreen" type="StaticBody3D"]
 script = ExtResource("1_1qrra")
